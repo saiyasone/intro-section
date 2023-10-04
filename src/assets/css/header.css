@@ -1,0 +1,125 @@
+header {
+  padding: 20px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-target {
+  display: flex;
+  align-items: center;
+}
+
+header nav .nav-brand a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.nav-target ul {
+  list-style: none;
+  display: none;
+}
+.nav-target ul li a {
+  text-decoration: none;
+  display: flex;
+  padding: 14px 0;
+  font-size: 0.95rem;
+  align-items: center;
+  text-transform: capitalize;
+  transition: 0.3s all ease;
+  color: var(--gray);
+}
+.nav-target ul li a:hover {
+  color: var(--black);
+}
+.nav-target ul li .link-icon {
+  margin-left: 0.6rem;
+}
+.nav-target ul li .link-icon img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* ========= Nav-Auth ========= */
+header nav .nav-auth {
+  display: none;
+}
+header nav .nav-auth button {
+  font-size: 0.95rem;
+}
+header nav .nav-mobile {
+  display: block;
+  cursor: pointer;
+}
+header nav .nav-mobile img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* ========= DropDown ========= */
+header nav ul .dropdown-list {
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 15%);
+  padding: 1rem 1.5rem;
+  display: none;
+  margin-top: 0.5rem;
+}
+header nav ul .dropdown-list.active {
+  display: block;
+}
+header nav ul .dropdown-list.left {
+  right: 80%;
+}
+
+header nav ul .dropdown-list .dropdown-item .dropdown-link {
+  padding: 8px 0;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--gray);
+  text-decoration: none;
+  transition: 0.3s all;
+  display: flex;
+  align-items: center;
+  white-space: wrap;
+}
+header nav ul .dropdown-list .dropdown-item .dropdown-link span {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: var(--gray);
+}
+header nav ul .dropdown-list .dropdown-item .dropdown-link span:hover {
+  color: var(--black);
+}
+header nav ul .dropdown-list .dropdown-item .dropdown-icon {
+  margin-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 25px 40px;
+  }
+  header nav .nav-target ul {
+    margin-left: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+  }
+
+  header nav .nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header nav .nav-mobile {
+    display: none;
+  }
+}

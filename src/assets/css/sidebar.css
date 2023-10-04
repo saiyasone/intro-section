@@ -1,0 +1,110 @@
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 30%);
+  z-index: 99;
+}
+
+aside {
+  width: 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: rgba(0, 0, 0, 12%);
+  background-color: #fff;
+  z-index: 999;
+  overflow: hidden;
+  transition: 0.5s all ease-in;
+}
+aside.active {
+  width: 100%;
+  overflow: visible;
+}
+
+aside .side-body {
+  transition: 0.3s all;
+  padding: 25px 30px;
+}
+
+aside .side-body .side-close {
+  text-align: end;
+}
+aside .side-body .side-close img {
+  cursor: pointer;
+  vertical-align: middle;
+  width: 20px;
+  height: auto;
+  object-fit: cover;
+}
+
+aside .side-body .side-wrapper {
+  padding-top: 30px;
+}
+aside .side-body .side-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.4rem;
+}
+aside .side-body .side-wrapper ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--gray);
+  padding: 8px 0;
+  font-size: 1.1rem;
+  transition: 0.3s all;
+}
+aside .side-body .side-wrapper ul li a:hover {
+  color: var(--black);
+}
+aside .side-body .side-wrapper ul li a .link-icon {
+  display: flex;
+  align-items: center;
+}
+aside .side-body .side-wrapper ul li a .link-icon img {
+  vertical-align: middle;
+  margin-left: 0.8rem;
+  transition: 0.3s all;
+}
+aside .side-body .side-wrapper ul li a .link-icon img.active {
+  transform: rotate(180deg);
+}
+
+aside .side-body .side-wrapper ul li .dropdown-list {
+  display: none;
+}
+aside .side-body .side-wrapper ul li .dropdown-list.active {
+  margin-top: 0.6rem;
+  display: block;
+}
+aside .side-body .side-wrapper ul li .dropdown-list .dropdown-item {
+  font-size: 0.9rem;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+aside .side-body .side-wrapper ul li .dropdown-list .dropdown-item img {
+  margin-right: 0.8rem;
+}
+
+aside .side-body .side-action {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+aside .side-body .side-action button {
+  width: 100%;
+  font-size: 1rem;
+}
+
+@media (min-width: 450px) {
+  aside.active {
+    width: 320px;
+  }
+}
