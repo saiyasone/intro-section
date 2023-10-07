@@ -7,7 +7,7 @@
         </div>
         <ul>
           <li>
-            <a @click="setFeature" href="#"
+            <a id="feature-container" @click="setFeature" href="#"
               >feature
               <div class="link-icon">
                 <img src="../assets/images/icon-arrow-down.svg" alt="" />
@@ -99,8 +99,7 @@
 </style>
 
 <script>
-import { reactive } from "vue";
-
+import { onMounted, reactive } from "vue";
 export default {
   emits: ["on-close"],
 
@@ -109,6 +108,8 @@ export default {
       feature: false,
       company: false,
     });
+
+    onMounted(() => {});
 
     function setToggle() {
       emit("on-close");
